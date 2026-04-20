@@ -2,14 +2,19 @@
 Paper Trader — simulates trades with fake money.
 Tracks portfolio, open positions, P&L, and logs every action.
 State is saved to disk so restarts don't lose open positions.
+
+New in v2:
+  - Circuit breaker: pauses trading after N consecutive losses,
+    daily loss limit, and per-symbol cooldown (Feature 2)
+  - ATR-based SL/TP via optional atr param in open_position() (Feature 4)
 """
 
 import json
 import logging
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple
 
 import config
 
@@ -31,7 +36,9 @@ class Portfolio:
         self.cash: float = config.STARTING_CAPITAL
         self.positions: Dict[str, Position] = {}
         self.closed_trades: list = []
+        self._last_closed: Dict[str, datetime] = {}   # in-memory only, never persisted
         self._load_state()
+        self._rebuild_last_closed()
 
     def _load_state(self):
         """Load saved state from disk so restarts don't lose positions."""
@@ -48,6 +55,17 @@ class Portfolio:
                   f"open={len(self.positions)}, closed={len(self.closed_trades)}")
         except Exception as e:
             print(f"[STATE] Could not load state: {e} — starting fresh")
+
+    def _rebuild_last_closed(self):
+        """Reconstruct cooldown state from saved trade history after restart."""
+        for trade in self.closed_trades:
+            sym = trade["symbol"]
+            try:
+                closed_at = datetime.fromisoformat(trade["closed_at"])
+                if sym not in self._last_closed or closed_at > self._last_closed[sym]:
+                    self._last_closed[sym] = closed_at
+            except (KeyError, ValueError):
+                pass
 
     def _save_state(self):
         """Save current state to disk."""
@@ -70,7 +88,60 @@ class Portfolio:
     def total_value(self) -> float:
         return self.cash
 
-    def open_position(self, symbol: str, price: float, signal: str, logger: logging.Logger):
+    # ── Circuit Breaker ────────────────────────────────────────────────────────
+
+    def is_trading_paused(self, symbol: str) -> Tuple[bool, str]:
+        """
+        Returns (paused: bool, reason: str).
+        Called by bot.py before open_position() on every BUY signal.
+        Returns (False, "") when USE_CIRCUIT_BREAKER is False.
+        """
+        if not config.USE_CIRCUIT_BREAKER:
+            return False, ""
+
+        now = datetime.utcnow()
+
+        # 1. Consecutive loss streak (portfolio-wide)
+        consecutive = 0
+        for trade in reversed(self.closed_trades):
+            if trade["pnl_usd"] < 0:
+                consecutive += 1
+            else:
+                break
+        if consecutive >= config.MAX_CONSECUTIVE_LOSSES:
+            return True, (f"Circuit breaker: {consecutive} consecutive losses "
+                          f"— waiting for market to recover")
+
+        # 2. Daily loss limit
+        today_str = now.strftime("%Y-%m-%d")
+        daily_pnl = sum(
+            t["pnl_usd"] for t in self.closed_trades
+            if t.get("closed_at", "").startswith(today_str)
+        )
+        daily_pnl_pct = (daily_pnl / config.STARTING_CAPITAL) * 100
+        if daily_pnl_pct < -config.MAX_DAILY_LOSS_PCT:
+            return True, (f"Daily loss limit hit ({daily_pnl_pct:.1f}%) "
+                          f"— no more trades today")
+
+        # 3. Per-symbol cooldown (minimum time between trades on same symbol)
+        if symbol in self._last_closed:
+            elapsed_minutes = (now - self._last_closed[symbol]).total_seconds() / 60
+            if elapsed_minutes < config.COOLDOWN_MINUTES:
+                remaining = config.COOLDOWN_MINUTES - elapsed_minutes
+                return True, f"Cooldown: {remaining:.1f}min remaining for {symbol}"
+
+        return False, ""
+
+    # ── Position Management ────────────────────────────────────────────────────
+
+    def open_position(self, symbol: str, price: float, signal: str,
+                      logger: logging.Logger, atr: float = None):
+        """
+        Open a new position.
+        atr: optional ATR value for volatility-adaptive SL/TP (Feature 4).
+             If provided and USE_ATR_EXITS=True, uses ATR-based levels.
+             Default None keeps backward compatibility with optimizer.py (4-arg call).
+        """
         if symbol in self.positions:
             return
         if len(self.positions) >= config.MAX_OPEN_TRADES:
@@ -86,9 +157,17 @@ class Portfolio:
             logger.warning(f"[{symbol}] Not enough cash to open position (${self.cash:.2f})")
             return
 
-        quantity    = allocation / price
-        stop_loss   = price * (1 - config.STOP_LOSS_PCT)
-        take_profit = price * (1 + config.TAKE_PROFIT_PCT)
+        quantity = allocation / price
+
+        # Feature 4: ATR-based or fixed % SL/TP
+        if atr and config.USE_ATR_EXITS and atr > 0:
+            stop_loss   = max(price - atr * config.ATR_SL_MULT, price * 0.001)
+            take_profit = price + atr * config.ATR_TP_MULT
+            sl_tp_mode  = f"ATR={atr:.2f}"
+        else:
+            stop_loss   = price * (1 - config.STOP_LOSS_PCT)
+            take_profit = price * (1 + config.TAKE_PROFIT_PCT)
+            sl_tp_mode  = "fixed%"
 
         self.positions[symbol] = Position(
             symbol=symbol,
@@ -103,10 +182,12 @@ class Portfolio:
 
         logger.info(
             f"[{symbol}] OPENED position | price=${price:.4f} | qty={quantity:.6f} "
-            f"| SL=${stop_loss:.4f} | TP=${take_profit:.4f} | cash=${self.cash:.2f}"
+            f"| SL=${stop_loss:.4f} | TP=${take_profit:.4f} "
+            f"| exits={sl_tp_mode} | cash=${self.cash:.2f}"
         )
 
-    def check_exits(self, symbol: str, current_price: float, signal: str, logger: logging.Logger):
+    def check_exits(self, symbol: str, current_price: float, signal: str,
+                    logger: logging.Logger):
         if symbol not in self.positions:
             return
 
@@ -139,6 +220,11 @@ class Portfolio:
             }
             self.closed_trades.append(trade_record)
             del self.positions[symbol]
+
+            # Update cooldown tracker (guard: optimizer uses __new__ without __init__)
+            if hasattr(self, '_last_closed'):
+                self._last_closed[symbol] = datetime.utcnow()
+
             self._save_state()
 
             emoji = "+" if pnl >= 0 else "-"
@@ -149,7 +235,7 @@ class Portfolio:
 
     def summary(self) -> dict:
         total_pnl = sum(t["pnl_usd"] for t in self.closed_trades)
-        wins  = [t for t in self.closed_trades if t["pnl_usd"] > 0]
+        wins   = [t for t in self.closed_trades if t["pnl_usd"] > 0]
         losses = [t for t in self.closed_trades if t["pnl_usd"] <= 0]
         win_rate = (len(wins) / len(self.closed_trades) * 100) if self.closed_trades else 0
 

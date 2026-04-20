@@ -20,7 +20,7 @@ import pandas as pd
 import config
 from paper_trader import Portfolio
 from live_trader import LiveTrader
-from strategy import get_signal
+from strategy import get_signal, compute_atr_value
 
 # ── Logging setup ─────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -98,7 +98,14 @@ def run_bot():
                 if config.PAPER_TRADING:
                     trader.check_exits(symbol, current_price, signal, logger)
                     if signal == "BUY":
-                        trader.open_position(symbol, current_price, signal, logger)
+                        # Feature 2: circuit breaker check
+                        paused, reason = trader.is_trading_paused(symbol)
+                        if paused:
+                            logger.info(f"[{symbol}] BUY blocked — {reason}")
+                        else:
+                            # Feature 4: compute ATR and pass to open_position
+                            atr = compute_atr_value(df, config.ATR_PERIOD) if config.USE_ATR_EXITS else None
+                            trader.open_position(symbol, current_price, signal, logger, atr=atr)
                 else:
                     trader.check_exits(symbol, current_price, signal)
                     if signal == "BUY":
@@ -179,7 +186,8 @@ def run_backtest():
 
             portfolio.check_exits(symbol, current_price, signal, logger)
             if signal == "BUY":
-                portfolio.open_position(symbol, current_price, signal, logger)
+                atr = compute_atr_value(window, config.ATR_PERIOD) if config.USE_ATR_EXITS else None
+                portfolio.open_position(symbol, current_price, signal, logger, atr=atr)
 
     summary = portfolio.summary()
     logger.info("=" * 50)
