@@ -1,0 +1,267 @@
+2026-04-19 16:12:19,842  INFO      Running backtest on last 500 candles...
+2026-04-19 16:12:27,220  INFO      ==================================================
+2026-04-19 16:12:27,221  INFO      BACKTEST RESULTS
+2026-04-19 16:12:27,221  INFO      ==================================================
+2026-04-19 16:12:27,221  INFO        cash: 50.0
+2026-04-19 16:12:27,221  INFO        open_positions: 0
+2026-04-19 16:12:27,221  INFO        closed_trades: 0
+2026-04-19 16:12:27,221  INFO        total_pnl_usd: 0
+2026-04-19 16:12:27,221  INFO        win_rate_pct: 0
+2026-04-19 16:12:27,221  INFO        wins: 0
+2026-04-19 16:12:27,221  INFO        losses: 0
+2026-04-19 16:12:27,221  INFO        starting_capital: $50.00
+2026-04-19 16:12:27,221  INFO        final_cash:       $50.00
+2026-04-19 16:12:27,221  INFO      ==================================================
+2026-04-19 16:12:27,221  WARNING   Past performance does NOT predict future results.
+2026-04-19 16:14:17,791  INFO      Running backtest on last 500 candles...
+2026-04-19 16:14:24,934  INFO      ==================================================
+2026-04-19 16:14:24,934  INFO      BACKTEST RESULTS
+2026-04-19 16:14:24,935  INFO      ==================================================
+2026-04-19 16:14:24,935  INFO        cash: 50.0
+2026-04-19 16:14:24,935  INFO        open_positions: 0
+2026-04-19 16:14:24,935  INFO        closed_trades: 0
+2026-04-19 16:14:24,935  INFO        total_pnl_usd: 0
+2026-04-19 16:14:24,935  INFO        win_rate_pct: 0
+2026-04-19 16:14:24,935  INFO        wins: 0
+2026-04-19 16:14:24,935  INFO        losses: 0
+2026-04-19 16:14:24,935  INFO        starting_capital: $50.00
+2026-04-19 16:14:24,935  INFO        final_cash:       $50.00
+2026-04-19 16:14:24,935  INFO      ==================================================
+2026-04-19 16:14:24,935  WARNING   Past performance does NOT predict future results.
+2026-04-19 16:16:16,288  INFO      Running backtest on last 500 candles...
+2026-04-19 16:16:23,544  INFO      ==================================================
+2026-04-19 16:16:23,544  INFO      BACKTEST RESULTS
+2026-04-19 16:16:23,544  INFO      ==================================================
+2026-04-19 16:16:23,544  INFO        cash: 50.0
+2026-04-19 16:16:23,544  INFO        open_positions: 0
+2026-04-19 16:16:23,544  INFO        closed_trades: 0
+2026-04-19 16:16:23,544  INFO        total_pnl_usd: 0
+2026-04-19 16:16:23,544  INFO        win_rate_pct: 0
+2026-04-19 16:16:23,544  INFO        wins: 0
+2026-04-19 16:16:23,544  INFO        losses: 0
+2026-04-19 16:16:23,544  INFO        starting_capital: $50.00
+2026-04-19 16:16:23,544  INFO        final_cash:       $50.00
+2026-04-19 16:16:23,544  INFO      ==================================================
+2026-04-19 16:16:23,544  WARNING   Past performance does NOT predict future results.
+2026-04-19 16:19:46,396  INFO      Running backtest on last 500 candles...
+2026-04-19 16:19:52,328  INFO      [BTC/USDT] OPENED position | price=$74021.5000 | qty=0.000169 | SL=$72541.0700 | TP=$76982.3600 | cash=$37.50
+2026-04-19 16:19:52,358  INFO      [BTC/USDT] CLOSED (STRATEGY_SELL) | exit=$75068.1500 | PnL=+$0.1767 (+1.41%) | cash=$50.18
+2026-04-19 16:19:52,391  INFO      [BTC/USDT] OPENED position | price=$74378.9700 | qty=0.000169 | SL=$72891.3906 | TP=$77354.1288 | cash=$37.63
+2026-04-19 16:19:52,410  INFO      [BTC/USDT] CLOSED (STRATEGY_SELL) | exit=$75342.9900 | PnL=+$0.1626 (+1.30%) | cash=$50.34
+2026-04-19 16:19:52,485  INFO      [BTC/USDT] OPENED position | price=$76738.6300 | qty=0.000164 | SL=$75203.8574 | TP=$79808.1752 | cash=$37.75
+2026-04-19 16:19:52,528  INFO      [BTC/USDT] CLOSED (STOP_LOSS) | exit=$74979.9900 | PnL=-$0.2884 (-2.29%) | cash=$50.05
+2026-04-19 16:19:52,529  INFO      [BTC/USDT] OPENED position | price=$75181.2700 | qty=0.000166 | SL=$73677.6446 | TP=$78188.5208 | cash=$37.54
+2026-04-19 16:19:52,540  INFO      [BTC/USDT] CLOSED (STRATEGY_SELL) | exit=$76045.8500 | PnL=+$0.1439 (+1.15%) | cash=$50.19
+2026-04-19 16:19:53,040  INFO      [ETH/USDT] OPENED position | price=$2314.3900 | qty=0.005422 | SL=$2268.1022 | TP=$2406.9656 | cash=$37.65
+2026-04-19 16:19:53,094  INFO      [ETH/USDT] CLOSED (STRATEGY_SELL) | exit=$2375.4300 | PnL=+$0.3310 (+2.64%) | cash=$50.53
+2026-04-19 16:19:53,120  INFO      [ETH/USDT] OPENED position | price=$2341.1600 | qty=0.005395 | SL=$2294.3368 | TP=$2434.8064 | cash=$37.89
+2026-04-19 16:19:53,167  INFO      [ETH/USDT] CLOSED (STRATEGY_SELL) | exit=$2348.9900 | PnL=+$0.0422 (+0.33%) | cash=$50.57
+2026-04-19 16:19:53,204  INFO      [ETH/USDT] OPENED position | price=$2410.0200 | qty=0.005246 | SL=$2361.8196 | TP=$2506.4208 | cash=$37.93
+2026-04-19 16:19:53,216  INFO      [ETH/USDT] CLOSED (STOP_LOSS) | exit=$2361.3000 | PnL=-$0.2556 (-2.02%) | cash=$50.31
+2026-04-19 16:19:53,221  INFO      [ETH/USDT] OPENED position | price=$2357.9300 | qty=0.005334 | SL=$2310.7714 | TP=$2452.2472 | cash=$37.73
+2026-04-19 16:19:53,257  INFO      [ETH/USDT] CLOSED (STOP_LOSS) | exit=$2303.2700 | PnL=-$0.2916 (-2.32%) | cash=$50.02
+2026-04-19 16:19:53,258  INFO      [ETH/USDT] OPENED position | price=$2315.4400 | qty=0.005401 | SL=$2269.1312 | TP=$2408.0576 | cash=$37.52
+2026-04-19 16:19:53,270  INFO      [ETH/USDT] CLOSED (STRATEGY_SELL) | exit=$2342.2700 | PnL=+$0.1449 (+1.16%) | cash=$50.17
+2026-04-19 16:19:53,271  INFO      ==================================================
+2026-04-19 16:19:53,272  INFO      BACKTEST RESULTS
+2026-04-19 16:19:53,272  INFO      ==================================================
+2026-04-19 16:19:53,272  INFO        cash: 50.1658
+2026-04-19 16:19:53,272  INFO        open_positions: 0
+2026-04-19 16:19:53,272  INFO        closed_trades: 9
+2026-04-19 16:19:53,272  INFO        total_pnl_usd: 0.1657
+2026-04-19 16:19:53,272  INFO        win_rate_pct: 66.7
+2026-04-19 16:19:53,272  INFO        wins: 6
+2026-04-19 16:19:53,272  INFO        losses: 3
+2026-04-19 16:19:53,272  INFO        starting_capital: $50.00
+2026-04-19 16:19:53,272  INFO        final_cash:       $50.17
+2026-04-19 16:19:53,272  INFO      ==================================================
+2026-04-19 16:19:53,272  WARNING   Past performance does NOT predict future results.
+2026-04-19 16:55:16,879  INFO      Running backtest on last 500 candles...
+2026-04-19 16:55:23,015  INFO      [BTC/USDT] OPENED position | price=$73730.4300 | qty=0.000170 | SL=$72624.4735 | TP=$75942.3429 | cash=$37.50
+2026-04-19 16:55:23,041  INFO      [BTC/USDT] CLOSED (STRATEGY_SELL) | exit=$75068.1500 | PnL=+$0.2268 (+1.81%) | cash=$50.23
+2026-04-19 16:55:23,077  INFO      [BTC/USDT] OPENED position | price=$73970.7600 | qty=0.000170 | SL=$72861.1986 | TP=$76189.8828 | cash=$37.67
+2026-04-19 16:55:23,088  INFO      [BTC/USDT] CLOSED (STRATEGY_SELL) | exit=$75415.2400 | PnL=+$0.2452 (+1.95%) | cash=$50.47
+2026-04-19 16:55:23,158  INFO      [BTC/USDT] OPENED position | price=$76738.6300 | qty=0.000164 | SL=$75587.5505 | TP=$79040.7889 | cash=$37.85
+2026-04-19 16:55:23,177  INFO      [BTC/USDT] CLOSED (STOP_LOSS) | exit=$75574.0900 | PnL=-$0.1915 (-1.52%) | cash=$50.28
+2026-04-19 16:55:23,178  INFO      [BTC/USDT] OPENED position | price=$75745.3500 | qty=0.000166 | SL=$74609.1698 | TP=$78017.7105 | cash=$37.71
+2026-04-19 16:55:23,213  INFO      [BTC/USDT] CLOSED (STRATEGY_SELL) | exit=$76045.8500 | PnL=+$0.0499 (+0.40%) | cash=$50.33
+2026-04-19 16:55:24,040  INFO      [ETH/USDT] OPENED position | price=$2341.1600 | qty=0.005375 | SL=$2306.0426 | TP=$2411.3948 | cash=$37.75
+2026-04-19 16:55:24,051  INFO      [ETH/USDT] CLOSED (STOP_LOSS) | exit=$2294.9700 | PnL=-$0.2482 (-1.97%) | cash=$50.08
+2026-04-19 16:55:24,052  INFO      [ETH/USDT] OPENED position | price=$2304.9200 | qty=0.005432 | SL=$2270.3462 | TP=$2374.0676 | cash=$37.56
+2026-04-19 16:55:24,091  INFO      [ETH/USDT] CLOSED (STRATEGY_SELL) | exit=$2354.8700 | PnL=+$0.2713 (+2.17%) | cash=$50.35
+2026-04-19 16:55:24,143  INFO      [ETH/USDT] OPENED position | price=$2358.5100 | qty=0.005337 | SL=$2323.1324 | TP=$2429.2653 | cash=$37.77
+2026-04-19 16:55:24,179  INFO      [ETH/USDT] CLOSED (STOP_LOSS) | exit=$2321.0000 | PnL=-$0.2002 (-1.59%) | cash=$50.15
+2026-04-19 16:55:24,180  INFO      [ETH/USDT] OPENED position | price=$2315.4400 | qty=0.005415 | SL=$2280.7084 | TP=$2384.9032 | cash=$37.61
+2026-04-19 16:55:24,193  INFO      ==================================================
+2026-04-19 16:55:24,194  INFO      BACKTEST RESULTS
+2026-04-19 16:55:24,194  INFO      ==================================================
+2026-04-19 16:55:24,194  INFO        cash: 37.6149
+2026-04-19 16:55:24,194  INFO        open_positions: 1
+2026-04-19 16:55:24,194  INFO        closed_trades: 7
+2026-04-19 16:55:24,194  INFO        total_pnl_usd: 0.1533
+2026-04-19 16:55:24,194  INFO        win_rate_pct: 57.1
+2026-04-19 16:55:24,194  INFO        wins: 4
+2026-04-19 16:55:24,194  INFO        losses: 3
+2026-04-19 16:55:24,194  INFO        starting_capital: $50.00
+2026-04-19 16:55:24,194  INFO        final_cash:       $37.61
+2026-04-19 16:55:24,194  INFO      ==================================================
+2026-04-19 16:55:24,194  WARNING   Past performance does NOT predict future results.
+2026-04-19 17:34:29,504  INFO      ============================================================
+2026-04-19 17:34:29,504  INFO        Bot starting  |  Mode: PAPER TRADING
+2026-04-19 17:34:29,504  INFO        Capital: $50.00  |  Symbols: ['BTC/USDT', 'ETH/USDT']
+2026-04-19 17:34:29,504  INFO      ============================================================
+2026-04-19 17:34:38,797  INFO      [BTC/USDT] price=$75750.6000  signal=HOLD
+2026-04-19 17:34:39,426  INFO      [ETH/USDT] price=$2327.5400  signal=HOLD
+2026-04-19 17:34:39,426  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 17:34:39,426  INFO      Sleeping 900s until next candle...
+2026-04-19 17:49:40,565  INFO      [BTC/USDT] price=$75839.9000  signal=HOLD
+2026-04-19 17:49:41,094  INFO      [ETH/USDT] price=$2327.8700  signal=HOLD
+2026-04-19 17:49:41,094  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 17:49:41,094  INFO      Sleeping 900s until next candle...
+2026-04-19 18:04:42,222  INFO      [BTC/USDT] price=$75852.5000  signal=HOLD
+2026-04-19 18:04:42,738  INFO      [ETH/USDT] price=$2331.1400  signal=HOLD
+2026-04-19 18:04:42,738  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 18:04:42,738  INFO      Sleeping 900s until next candle...
+2026-04-19 18:19:44,939  INFO      [BTC/USDT] price=$75624.5000  signal=HOLD
+2026-04-19 18:19:45,802  INFO      [ETH/USDT] price=$2322.5700  signal=HOLD
+2026-04-19 18:19:45,802  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 18:19:45,802  INFO      Sleeping 900s until next candle...
+2026-04-19 18:34:46,967  INFO      [BTC/USDT] price=$75701.7000  signal=HOLD
+2026-04-19 18:34:47,507  INFO      [ETH/USDT] price=$2325.6100  signal=HOLD
+2026-04-19 18:34:47,507  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 18:34:47,507  INFO      Sleeping 900s until next candle...
+2026-04-19 18:49:48,772  INFO      [BTC/USDT] price=$75637.9000  signal=HOLD
+2026-04-19 18:49:49,330  INFO      [ETH/USDT] price=$2322.5000  signal=HOLD
+2026-04-19 18:49:49,332  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 18:49:49,332  INFO      Sleeping 900s until next candle...
+2026-04-19 19:04:51,079  INFO      [BTC/USDT] price=$75190.0000  signal=HOLD
+2026-04-19 19:04:51,624  INFO      [ETH/USDT] price=$2303.8900  signal=HOLD
+2026-04-19 19:04:51,624  INFO        PORTFOLIO | cash=$50.00 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 19:04:51,624  INFO      Sleeping 900s until next candle...
+2026-04-19 19:19:52,891  INFO      [BTC/USDT] price=$75281.8000  signal=HOLD
+2026-04-19 19:19:53,505  INFO      [ETH/USDT] price=$2310.7200  signal=BUY
+2026-04-19 19:19:53,506  INFO      [ETH/USDT] OPENED position | price=$2310.7200 | qty=0.005410 | SL=$2276.0592 | TP=$2380.0416 | cash=$37.50
+2026-04-19 19:19:53,506  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 19:19:53,506  INFO      Sleeping 900s until next candle...
+2026-04-19 19:34:54,945  INFO      [BTC/USDT] price=$75127.3000  signal=HOLD
+2026-04-19 19:34:55,478  INFO      [ETH/USDT] price=$2306.6600  signal=HOLD
+2026-04-19 19:34:55,478  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 19:34:55,479  INFO      Sleeping 900s until next candle...
+2026-04-19 19:49:56,606  INFO      [BTC/USDT] price=$75079.4000  signal=HOLD
+2026-04-19 19:49:57,163  INFO      [ETH/USDT] price=$2307.8600  signal=HOLD
+2026-04-19 19:49:57,163  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 19:49:57,163  INFO      Sleeping 900s until next candle...
+2026-04-19 20:04:58,361  INFO      [BTC/USDT] price=$74692.7000  signal=HOLD
+2026-04-19 20:04:58,887  INFO      [ETH/USDT] price=$2292.2100  signal=HOLD
+2026-04-19 20:04:58,887  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 20:04:58,887  INFO      Sleeping 900s until next candle...
+2026-04-19 20:20:00,021  INFO      [BTC/USDT] price=$74787.0000  signal=HOLD
+2026-04-19 20:20:00,558  INFO      [ETH/USDT] price=$2295.8500  signal=HOLD
+2026-04-19 20:20:00,558  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 20:20:00,558  INFO      Sleeping 900s until next candle...
+2026-04-19 20:35:01,868  INFO      [BTC/USDT] price=$74717.5000  signal=HOLD
+2026-04-19 20:35:02,438  INFO      [ETH/USDT] price=$2293.5000  signal=HOLD
+2026-04-19 20:35:02,438  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 20:35:02,438  INFO      Sleeping 900s until next candle...
+2026-04-19 20:50:12,460  ERROR     Network error: kucoin GET https://api.kucoin.com/api/v1/market/candles?symbol=BTC-USDT&type=15min&startAt=1776534602&endAt=1776624602 — retrying in 30s
+2026-04-19 20:50:43,771  INFO      [BTC/USDT] price=$74750.2000  signal=HOLD
+2026-04-19 20:50:44,291  INFO      [ETH/USDT] price=$2294.8000  signal=HOLD
+2026-04-19 20:50:44,291  INFO        PORTFOLIO | cash=$37.50 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 20:50:44,292  INFO      Sleeping 900s until next candle...
+2026-04-19 21:05:46,000  INFO      [BTC/USDT] price=$74943.9000  signal=BUY
+2026-04-19 21:05:46,000  INFO      [BTC/USDT] OPENED position | price=$74943.9000 | qty=0.000125 | SL=$73819.7415 | TP=$77192.2170 | cash=$28.12
+2026-04-19 21:05:46,640  INFO      [ETH/USDT] price=$2301.2500  signal=BUY
+2026-04-19 21:05:46,641  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 21:05:46,641  INFO      Sleeping 900s until next candle...
+2026-04-19 21:20:47,976  INFO      [BTC/USDT] price=$75036.7000  signal=HOLD
+2026-04-19 21:20:48,498  INFO      [ETH/USDT] price=$2304.4700  signal=HOLD
+2026-04-19 21:20:48,498  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 21:20:48,498  INFO      Sleeping 900s until next candle...
+2026-04-19 21:35:49,822  INFO      [BTC/USDT] price=$74989.3000  signal=HOLD
+2026-04-19 21:35:50,371  INFO      [ETH/USDT] price=$2297.8500  signal=HOLD
+2026-04-19 21:35:50,372  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 21:35:50,372  INFO      Sleeping 900s until next candle...
+2026-04-19 21:50:51,807  INFO      [BTC/USDT] price=$75008.1000  signal=HOLD
+2026-04-19 21:50:52,341  INFO      [ETH/USDT] price=$2299.0700  signal=HOLD
+2026-04-19 21:50:52,341  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 21:50:52,341  INFO      Sleeping 900s until next candle...
+2026-04-19 22:05:53,607  INFO      [BTC/USDT] price=$74709.5000  signal=HOLD
+2026-04-19 22:05:54,156  INFO      [ETH/USDT] price=$2291.4600  signal=HOLD
+2026-04-19 22:05:54,156  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 22:05:54,156  INFO      Sleeping 900s until next candle...
+2026-04-19 22:20:55,509  INFO      [BTC/USDT] price=$74696.4000  signal=HOLD
+2026-04-19 22:20:56,044  INFO      [ETH/USDT] price=$2290.5200  signal=HOLD
+2026-04-19 22:20:56,045  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 22:20:56,045  INFO      Sleeping 900s until next candle...
+2026-04-19 22:35:57,334  INFO      [BTC/USDT] price=$74865.9000  signal=BUY
+2026-04-19 22:35:57,866  INFO      [ETH/USDT] price=$2296.2100  signal=HOLD
+2026-04-19 22:35:57,867  INFO        PORTFOLIO | cash=$28.12 | trades=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-19 22:35:57,867  INFO      Sleeping 900s until next candle...
+2026-04-20 09:43:52,309  INFO      ============================================================
+2026-04-20 09:43:52,309  INFO        Bot starting  |  Mode: PAPER TRADING
+2026-04-20 09:43:52,309  INFO        Capital: $50.00  |  Symbols: ['BTC/USDT', 'ETH/USDT']
+2026-04-20 09:43:52,309  INFO      ============================================================
+2026-04-20 09:43:59,467  INFO      [BTC/USDT] price=$74966.8000  signal=HOLD
+2026-04-20 09:43:59,945  INFO      [ETH/USDT] price=$2298.9700  signal=HOLD
+2026-04-20 09:43:59,945  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 09:43:59,945  INFO      Sleeping 900s until next candle...
+2026-04-20 09:51:46,948  INFO      ============================================================
+2026-04-20 09:51:46,948  INFO        Bot starting  |  Mode: PAPER TRADING
+2026-04-20 09:51:46,948  INFO        Capital: $50.00  |  Symbols: ['BTC/USDT', 'ETH/USDT']
+2026-04-20 09:51:46,948  INFO      ============================================================
+2026-04-20 09:51:52,595  INFO      [BTC/USDT] price=$74826.5000  signal=HOLD
+2026-04-20 09:51:53,061  INFO      [ETH/USDT] price=$2291.9400  signal=HOLD
+2026-04-20 09:51:53,061  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 09:51:53,061  INFO      Sleeping 900s until next candle...
+2026-04-20 09:55:15,920  INFO      ============================================================
+2026-04-20 09:55:15,920  INFO        Bot starting  |  Mode: PAPER TRADING
+2026-04-20 09:55:15,920  INFO        Capital: $50.00  |  Symbols: ['BTC/USDT', 'ETH/USDT']
+2026-04-20 09:55:15,920  INFO      ============================================================
+2026-04-20 09:55:24,682  INFO      [BTC/USDT] price=$74715.3000  signal=HOLD
+2026-04-20 09:55:25,186  INFO      [ETH/USDT] price=$2289.6100  signal=HOLD
+2026-04-20 09:55:25,186  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 09:55:25,186  INFO      Sleeping 900s until next candle...
+2026-04-20 09:59:00,957  INFO      [BTC/USDT] price=$74770.6000  signal=HOLD
+2026-04-20 09:59:01,437  INFO      [ETH/USDT] price=$2294.7500  signal=HOLD
+2026-04-20 09:59:01,437  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 09:59:01,437  INFO      Sleeping 900s until next candle...
+2026-04-20 10:00:13,758  INFO      ============================================================
+2026-04-20 10:00:13,758  INFO        Bot starting  |  Mode: PAPER TRADING
+2026-04-20 10:00:13,758  INFO        Capital: $50.00  |  Symbols: ['BTC/USDT', 'ETH/USDT']
+2026-04-20 10:00:13,758  INFO      ============================================================
+2026-04-20 10:00:20,092  INFO      [BTC/USDT] price=$74829.3000  signal=HOLD
+2026-04-20 10:00:20,719  INFO      [ETH/USDT] price=$2297.6000  signal=HOLD
+2026-04-20 10:00:20,719  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:00:20,719  INFO      Sleeping 60s until next candle...
+2026-04-20 10:01:21,232  INFO      [BTC/USDT] price=$74801.8000  signal=HOLD
+2026-04-20 10:01:21,721  INFO      [ETH/USDT] price=$2296.5900  signal=HOLD
+2026-04-20 10:01:21,721  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:01:21,721  INFO      Sleeping 60s until next candle...
+2026-04-20 10:02:22,208  INFO      [BTC/USDT] price=$74756.1000  signal=HOLD
+2026-04-20 10:02:22,689  INFO      [ETH/USDT] price=$2295.0900  signal=HOLD
+2026-04-20 10:02:22,689  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:02:22,689  INFO      Sleeping 60s until next candle...
+2026-04-20 10:03:23,200  INFO      [BTC/USDT] price=$74700.2000  signal=HOLD
+2026-04-20 10:03:23,782  INFO      [ETH/USDT] price=$2293.1100  signal=HOLD
+2026-04-20 10:03:23,783  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:03:23,783  INFO      Sleeping 60s until next candle...
+2026-04-20 10:04:24,297  INFO      [BTC/USDT] price=$74734.7000  signal=HOLD
+2026-04-20 10:04:24,781  INFO      [ETH/USDT] price=$2294.2900  signal=HOLD
+2026-04-20 10:04:24,781  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:04:24,781  INFO      Sleeping 60s until next candle...
+2026-04-20 10:05:25,280  INFO      [BTC/USDT] price=$74695.4000  signal=HOLD
+2026-04-20 10:05:25,885  INFO      [ETH/USDT] price=$2292.1000  signal=HOLD
+2026-04-20 10:05:25,885  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:05:25,885  INFO      Sleeping 60s until next candle...
+2026-04-20 10:06:26,375  INFO      [BTC/USDT] price=$74686.8000  signal=HOLD
+2026-04-20 10:06:26,867  INFO      [ETH/USDT] price=$2292.6000  signal=HOLD
+2026-04-20 10:06:26,867  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:06:26,867  INFO      Sleeping 60s until next candle...
+2026-04-20 10:06:53,742  INFO      [BTC/USDT] price=$74710.4000  signal=HOLD
+2026-04-20 10:06:54,322  INFO      [ETH/USDT] price=$2294.0900  signal=HOLD
+2026-04-20 10:06:54,322  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:06:54,322  INFO      Sleeping 900s until next candle...
+2026-04-20 10:07:27,346  INFO      [BTC/USDT] price=$74735.2000  signal=HOLD
+2026-04-20 10:07:27,821  INFO      [ETH/USDT] price=$2293.5900  signal=HOLD
+2026-04-20 10:07:27,821  INFO        PORTFOLIO | cash=$50.00 | open=0 | closed=0 | PnL=$+0.0000 | win_rate=0%
+2026-04-20 10:07:27,821  INFO      Sleeping 60s until next candle...
